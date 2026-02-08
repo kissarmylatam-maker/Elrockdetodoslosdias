@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musaic - Sonic Rebellion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Inter:wght@400;700&family=Space+Mono&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d0d;
+            color: #eeeeee;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, .font-syne {
+            font-family: 'Syne', sans-serif;
+            text-transform: uppercase;
+        }
+        .mono { font-family: 'Space Mono', monospace; }
+        
+        /* Gritty Overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .rock-border {
+            border: 2px solid #333;
+        }
+        .rock-border:hover {
+            border-color: #dc2626;
+        }
+        
+        .stencil-tag {
+            background: #dc2626;
+            color: white;
+            padding: 2px 8px;
+            font-weight: 900;
+            clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+        }
+
+        .spotify-bg { background-color: #dc2626; } /* High contrast red for rock style */
+        
+        .glitch-hover:hover {
+            text-shadow: 2px 0 #dc2626, -2px 0 #2563eb;
+            animation: glitch 0.3s infinite;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0) }
+            20% { transform: translate(-2px, 2px) }
+            40% { transform: translate(-2px, -2px) }
+            60% { transform: translate(2px, 2px) }
+            80% { transform: translate(2px, -2px) }
+            100% { transform: translate(0) }
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0d0d0d; }
+        ::-webkit-scrollbar-thumb { background: #dc2626; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
