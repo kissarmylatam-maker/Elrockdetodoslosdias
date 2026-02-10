@@ -39,20 +39,20 @@ const App: React.FC = () => {
   const renderHome = () => (
     <>
       <NewReleasesBar />
-      <main className="max-w-7xl mx-auto px-6 pt-16">
-        <section className="mb-24">
+      <main className="max-w-7xl mx-auto px-6 pt-8">
+        <section className="mb-12">
           <HeroCarousel items={featuredItems} onSelect={setSelectedPost} />
         </section>
 
-        <section className="mb-24 border-y-2 border-white/5 py-12">
-           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-              <h2 className="text-4xl font-syne font-black italic">EL PULSO <span className="text-red-600">AHORA</span></h2>
-              <div className="flex flex-wrap gap-4">
+        <section className="mb-12 border-y-2 border-white/5 py-8">
+           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+              <h2 className="text-3xl font-syne font-black italic">EL PULSO <span className="text-red-600">AHORA</span></h2>
+              <div className="flex flex-wrap gap-2">
                 {categories.map(cat => (
                   <button 
                     key={cat}
                     onClick={() => handleCategoryClick(cat)}
-                    className={`bg-zinc-900 border border-zinc-700 px-4 py-1 mono text-[10px] font-black uppercase hover:bg-white hover:text-black transition-all ${cat === 'BYTEMOS' ? 'hover:!text-[#00ff00] hover:!bg-black border-dashed' : ''}`}
+                    className={`bg-zinc-900 border border-zinc-700 px-3 py-1 mono text-[10px] font-black uppercase hover:bg-white hover:text-black transition-all ${cat === 'BYTEMOS' ? 'hover:!text-[#00ff00] hover:!bg-black border-dashed' : ''}`}
                   >
                     Ver {cat}
                   </button>
@@ -61,11 +61,11 @@ const App: React.FC = () => {
            </div>
         </section>
 
-        {/* <section className="mb-24">
+        {/* <section className="mb-12">
           <AIPanel />
         </section> */}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {latestNews.map(item => (
             <ArticleCard key={item.id} item={item} onClick={setSelectedPost} />
           ))}

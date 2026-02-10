@@ -17,10 +17,10 @@ const NewReleasesBar: React.FC = () => {
           Nuevos Decibelios
         </h3>
       </div>
-      <div className="flex space-x-8 overflow-x-auto px-6 no-scrollbar pb-4">
+      <div className="flex space-x-4 overflow-x-auto px-6 no-scrollbar pb-4">
         {RELEASES.map((release) => (
-          <div key={release.id} className="flex-none w-44 group cursor-pointer">
-            <div className="relative aspect-square overflow-hidden mb-3 bg-zinc-800 border-2 border-white/5 transition-all group-hover:border-red-600 group-hover:rotate-1">
+          <div key={release.id} className="flex-none w-28 group cursor-pointer">
+            <div className="relative aspect-square overflow-hidden mb-2 bg-zinc-800 border-2 border-white/5 transition-all group-hover:border-red-600 group-hover:rotate-1">
               <img 
                 src={release.coverUrl} 
                 alt={release.title} 
