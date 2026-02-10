@@ -4,7 +4,7 @@ import { NEWS, RELEASES } from './constants';
 import { Category, NewsItem } from './types';
 import NewReleasesBar from './components/NewReleasesBar';
 import ArticleCard from './components/ArticleCard';
-import AIPanel from './components/AIPanel';
+// import AIPanel from './components/AIPanel'; // Disabled Gemini API for now
 import PostDetail from './components/PostDetail';
 import HeroCarousel from './components/HeroCarousel';
 import SubmissionModal from './components/SubmissionModal';
@@ -61,9 +61,9 @@ const App: React.FC = () => {
            </div>
         </section>
 
-        <section className="mb-24">
+        {/* <section className="mb-24">
           <AIPanel />
-        </section>
+        </section> */}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-20">
           {latestNews.map(item => (

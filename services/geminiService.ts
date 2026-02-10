@@ -2,11 +2,9 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { AICreativeInsight } from "../types";
 
-const apiKey = import.meta.env.VITE_GEMINI_API_KEY || '';
-if (!apiKey) {
-  console.warn('VITE_GEMINI_API_KEY is not set');
-}
-const ai = new GoogleGenAI({ apiKey });
+// Gemini API temporarily disabled
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY || 'disabled';
+const ai = apiKey === 'disabled' ? null : new GoogleGenAI({ apiKey });
 
 export const getCreativeInsight = async (topic: string): Promise<AICreativeInsight> => {
   try {
