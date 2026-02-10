@@ -57,7 +57,7 @@ const InfoPages: React.FC<Props> = ({ type, onClose }) => {
           </div>
 
           <div className="mt-20 flex justify-between items-center opacity-20 mono text-[10px] uppercase font-black">
-            <span>MUSAIC v2.5 // 2024</span>
+            <span>El Rock de Todos los Días v2.5 // 2026</span>
             <span>PROPIEDAD DEL UNDERGROUND</span>
           </div>
         </div>
